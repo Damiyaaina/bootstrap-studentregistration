@@ -163,8 +163,9 @@ $username = $_SESSION['username'];
   </div>
 </nav>
 
+<img src="UTM-LOGO-FULL.png" class="rounded mx-auto d-block" alt="UTM Logo" >
+
 <h1>STUDENT REGISTRATION LIST</h1>
-<h3><img src="UTM-LOGO-FULL.png" alt="UTM Logo"></h3>
 
 <table>
     <tr>
