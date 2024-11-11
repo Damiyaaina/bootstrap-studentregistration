@@ -11,57 +11,11 @@ $username = $_SESSION['username'];
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Registration Form</title>
 
      
-    <!--
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: rgb(102, 79, 99);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            background-color: purple;
-            font-size: 2.5em;
-            text-align: center;
-            padding: 0.5em;
-            color: white;
-            width: 100%;
-            margin: 0;
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #fff;
-            font-size: 1.2em;
-            margin-top: 1em;
-        }
-
-        h3 img {
-            width: 300px;
-            height: 100px;
-            vertical-align: middle;
-        }
-
-        a {
-            text-decoration: none;
-            color: #d9534f;
-            font-weight: bold;
-            margin-left: 10px;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #c9302c;
-        }
-
         table {
             border-collapse: collapse;
             width: 98%;
@@ -119,37 +73,22 @@ $username = $_SESSION['username'];
         a.delete:hover {
             background-color: rgb(201 48 44);
         }
-
-        .new-student-link {
-            display: inline-block;
-            margin-top: 1.5em;
-            padding: 10px 20px;
-            text-decoration: none;
-            background-color: rgb(91 192 222);
-            color: white;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .new-student-link:hover {
-            background-color: rgb(49 176 213);
-        }
     </style>
--->
+
 
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-light" style="background-color: #f4e9e1;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">STUDENT PORTAL</a>
+    <a class="navbar-brand"><i class="bi bi-mortarboard-fill px-2"></i>STUDENT PORTAL</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link active" aria-current="page" href="create.php">Add Student</a>
         </li>
         <li class="nav-item">
@@ -163,9 +102,10 @@ $username = $_SESSION['username'];
   </div>
 </nav>
 
-<img src="UTM-LOGO-FULL.png" class="rounded mx-auto d-block" alt="UTM Logo" >
+<img src="UTM-LOGO-FULL.png" class="img-fluid rounded mx-auto d-block my-4 w-25" alt="UTM logo">
 
-<h1>STUDENT REGISTRATION LIST</h1>
+
+<div class="text-center"><h1 class="lead text-center display-4">STUDENT REGISTRATION LIST</h1></div>
 
 <table>
     <tr>
@@ -204,8 +144,6 @@ $username = $_SESSION['username'];
     }
     ?>
 </table>
-
-<a href="create.php" class="new-student-link">New Student Registration</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>

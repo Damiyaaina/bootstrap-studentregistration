@@ -4,140 +4,97 @@
     <title>Student Registration Form</title>
 
     <style>
-        /* General Styling */
-        body {
-            background-color: rgb(164 119 99);
-            font-family: 'Times New Roman', Times, serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h2 {
-            background-color: rgb(210 151 123);
-            color: white;
-            font-size: 30px;
-            font-family: 'Times New Roman', Times, serif;
-            text-align: center;
-            padding: 15px;
-            width: 100%;
-            margin: 0;
-        }
-
-        form {
-            font-size: 18px;
-            background-color: rgb(203 148 142);
-            padding: 25px 30px;
+      
+        .form-container {
+            background-color: #f8d7da; 
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-            width: 60%;
-            max-width: 700px;
-            margin-top: 20px;
-        }
-
-        label {
-            display: inline-block;
-            width: 120px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: black;
-        }
-
-        input[type="text"],
-        .studID,
-        .name,
-        .email,
-        .address,
-        .program {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid;
-            width: calc(100% - 130px);
-        }
-
-        input[type="text"]:focus {
-            border-color: rgb(74 111 165);
-            outline: none;
-            box-shadow: 0px 0px 5px rgba(74, 111, 165, 0.3);
-        }
-
-        input[type="radio"] {
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        /* Submit Button */
-        button {
-            padding: 10px 25px;
-            font-size: 18px;
-            background-color: rgb(74 111 165);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        button:hover {
-            background-color: rgb(58 92 133);
-            transform: scale(1.05);
-        }
-
-        /* Back Link */
-        a {
-            display: inline-block;
-            margin-top: 15px;
-            text-decoration: none;
-            color: #4a6fa5;
-            font-weight: bold;
-            transition: color 0.3s;
-            text-align: center;
-        }
-
-        a:hover {
-            color: #3a5c85;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+            max-width: 800px; 
+            width: 100%; 
         }
     </style>
-</head>
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<body>
-    <h2>Student Registration Form</h2>
-    <form action="create.php" method="POST">
-        <label> Student ID: </label>
-        <input class="studID" type="text" name="studentID" required><br>
+<body class="bg-light">
 
-        <label> Name: </label>
-        <input class="name" type="text" name="name" required><br>
+<nav class="navbar navbar-light" style="background-color: #f4e9e1;">
+  <div class="container-fluid">
+    <a class="navbar-brand"><i class="bi bi-mortarboard-fill px-2"></i>STUDENT PORTAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="create.php">Add Student</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.php">List Student</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-        <label> Email: </label>
-        <input class="email" type="text" name="email" required><br>
 
-        <label> Address: </label>
-        <input class="address" type="text" name="address" required><br>
+<div class="mt-5 container d-flex justify-content-center align-items-center">
+    <form action="create.php" method="POST" class="col-md-6 col-lg-12 form-container">
+        <h2 class="mb-4 text-center">Student Registration Form</h2>
 
-        <label> Program: </label>
-        <input class="program" type="text" name="program" required><br>
+        <div class="mb-3">
+            <label for="studentID" class="form-label">Student ID: </label>
+            <input class="form-control" type="text" name="studentID" id="studentID" required>
+        </div>
+       
+        <div class="mb-3">
+            <label for="name" class="form-label">Name: </label>
+            <input class="form-control" type="text" name="name" id="name" required>
+        </div>
 
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="MALE">
-        <label for="male">MALE</label><br>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email: </label>
+            <input class="form-control" type="email" name="email" id="email" required>
+        </div>
 
-        <input type="radio" id="female" name="gender" value="FEMALE">
-        <label for="female">FEMALE</label><br>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address: </label>
+            <input class="form-control" type="text" name="address" id="address" required>
+        </div>
 
-        <input type="radio" id="other" name="gender" value="OTHER">
-        <label for="other">OTHER</label><br><br>
+        <div class="mb-3">
+            <label for="program" class="form-label">Program: </label>
+            <input class="form-control" type="text" name="program" id="program" required>
+        </div>
 
-        <button type="submit">Submit</button>
+        <fieldset class="mb-3">
+            <legend class="form-label">Gender</legend>
+            <div class="form-check">
+                <input type="radio" id="male" name="gender" value="MALE" class="form-check-input" required>
+                <label for="male" class="form-check-label">MALE</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="female" name="gender" value="FEMALE" class="form-check-input" required>
+                <label for="female" class="form-check-label">FEMALE</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="other" name="gender" value="OTHER" class="form-check-input" required>
+                <label for="other" class="form-check-label">OTHER</label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-light w-100">Submit</button>
     </form>
+</div>
 
-    <a href="form.php">Back to Student registration list</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

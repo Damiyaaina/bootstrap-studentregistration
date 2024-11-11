@@ -2,6 +2,7 @@
     <head>
         <title>LOG IN</title>
 
+
         <style>
             body {
                font-family: 'Times New Roman', Times, serif;
@@ -9,85 +10,45 @@
                align-items: center;
                justify-content: center;
                min-height: 100vh;
-               background: url('bg login.jpg') no-repeat center center fixed;
+               background: url('bg log in.jpg') no-repeat center center fixed;
                background-size: cover;
             }
-
-            .login-container {
-               background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-               padding: 2rem;
-               border-radius: 15px;
-               backdrop-filter: blur(10px);
-               max-width: 400px;
-               width: 100%;
-               text-align: center;
-               color: white;
-            }
-
-            .login-container h2{
-               font-size: 50px;
-               font-weight: bold;
-               margin-bottom: 1rem;
-               color: rgb(244, 233, 225);
-            }
-
-            .login-container input[type="text"],
-            .login-container input[type="password"] {
-               width: 100%;
-               padding: 1rem;
-               margin: 0.5rem 0;
-               border: none;
-               border-radius: 8px;
-               outline: none;
-               background: rgba(255, 255, 255, 0.2);
-               color: white;
-            }
-
-            .login-container input::placeholder {
-               color: rgba(255, 255, 255, 0.7);
-            }
-
-            .login-container button {
-               width: 100%;
-               padding: 1rem;
-               background-color: rgb(76, 175, 80);
-               border: none;
-               border-radius: 8px;
-               font-size: 20px;
-               color: white;
-               cursor: pointer;
-            }
-
-            .login-container button:hover {
-               background-color: rgb(69, 160, 73);
-            }
-
-            .login-container a {
-               color: #ffffff;
-               text-decoration: none;
-               margin-top: 1rem;
-               display: inline-block;
-            }
-
-            .login-container a:hover {
-               text-decoration: underline;
-            }
-
         </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
 
-    <body>
-        <div class="login-container"><h2>LOG IN</h2>
-        <form action="login.php" method="POST">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
-            <button type="submit">Log In</button>
-        </form>
+    <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
 
-        <a href="register.php">Don't have an account? Register Here</a>
+<div class="login-container">
+    <div class="card shadow">
+        <div class="card-body" style="background-color: #dfb6b2">
+        <i class="bi bi-person-circle" style="font-size: 50px; color: #333;"></i>
+
+
+            <h2 class="card-title text-center">LOG IN</h2>
+            <form action="login.php" method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Log In</button>
+            </form>
+            <div class="text-center mt-3">
+                <a href="register.php">Don't have an account? Register Here</a>
+            </div>
         </div>
+    </div>
+</div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
     </body>
 </html>
 
